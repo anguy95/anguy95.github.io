@@ -77,6 +77,10 @@ header {
   .landing-page-content .iphone > img {
     width: 375px; }
 
+.about-me {
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%); }
+
 .section-header,
 .about-me-header {
   font-size: 15em;
@@ -130,6 +134,8 @@ header {
     margin-top: .5em; }
 
 .skills {
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
   background-attachment: fixed;
   background-blend-mode: multiply;
   background-color: #9ACFBE;

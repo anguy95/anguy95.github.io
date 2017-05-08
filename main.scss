@@ -8,6 +8,11 @@ $main-gradient: (191deg, #DCED8E 0%, #ABD7B6 31%, #73BCCF 68%, #5DA6D4 92%, #569
   padding: 0;
 }
 
+@mixin angle-div {
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+}
+
 html,
 body {
   font-family: sans-serif;
@@ -109,6 +114,10 @@ header {
   }
 }
 
+.about-me {
+  @include angle-div;
+}
+
 .about-me-content {
   //adsfds
 }
@@ -181,6 +190,7 @@ header {
 }
 
 .skills {
+  @include angle-div;
   background-attachment: fixed;
   background-blend-mode: multiply;
   background-color: $skills-bg-color;
