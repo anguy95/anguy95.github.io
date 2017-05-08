@@ -8,10 +8,19 @@ $main-gradient: (191deg, #DCED8E 0%, #ABD7B6 31%, #73BCCF 68%, #5DA6D4 92%, #569
   padding: 0;
 }
 
+@mixin angle-div {
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+}
+
 html,
 body {
   font-family: sans-serif;
-  font-size: 62.5%;
+  font-size: calc(30% + .25vw);
+}
+
+section {
+  padding: 1px 50px 100px;
 }
 
 .container {
@@ -87,7 +96,7 @@ header {
 .landing-page-content {
   display: flex;
   flex-wrap: wrap;
-  height: 800px;
+  height: 700px;
   justify-content: space-between;
 
   .who-i-am {
@@ -105,9 +114,8 @@ header {
   }
 }
 
-
 .about-me {
-  padding: 1px 0 100px;
+  @include angle-div;
 }
 
 .about-me-content {
@@ -182,6 +190,7 @@ header {
 }
 
 .skills {
+  @include angle-div;
   background-attachment: fixed;
   background-blend-mode: multiply;
   background-color: $skills-bg-color;
@@ -189,7 +198,6 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 1px 0 100px;
 }
 
 .skills-content {
@@ -236,10 +244,6 @@ header {
   box-sizing: border-box;
   height: 356px;
   width: 356px;
-}
-
-.contact-me {
-  padding-bottom: 100px;
 }
 
 .contact-me-container {
