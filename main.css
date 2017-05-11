@@ -7,14 +7,15 @@ body {
   font-family: sans-serif;
   font-size: calc(30% + .25vw); }
   @media (min-width: 1440px) {
-    html html,
-    html body,
-    body html,
-    body body {
+    html,
+    body {
       font-size: 62.5%; } }
 
 section {
   padding: 1px 50px 100px; }
+  @media (max-width: 500px) {
+    section {
+      padding: 1px 20px 100px; } }
 
 .section-container {
   margin: 0 auto;
@@ -41,6 +42,9 @@ header {
     margin-left: 5px;
     text-transform: uppercase;
     vertical-align: middle; }
+    @media (max-width: 500px) {
+      .site-logo span {
+        font-size: 7em; } }
   .site-logo img {
     display: cell;
     height: 50px;
@@ -105,11 +109,15 @@ header {
 
 .section-header,
 .about-me-header {
-  font-size: 15em;
-  margin: 60px 0; }
+  font-size: 10em;
+  margin: 100px 0; }
   .section-header::first-letter,
   .about-me-header::first-letter {
     border-bottom: thick solid #000; }
+  @media (max-width: 500px) {
+    .section-header,
+    .about-me-header {
+      margin: 25px 0; } }
 
 .description {
   font-size: 2.8em;
@@ -117,6 +125,12 @@ header {
   line-height: 2em;
   margin-top: .5em;
   text-indent: 3em; }
+  @media (max-width: 860px) {
+    .description {
+      font-size: 4em; } }
+  @media (max-width: 500px) {
+    .description {
+      font-size: 7em; } }
 
 .num {
   background: -webkit-linear-gradient(191deg, #DCED8E 0%, #ABD7B6 31%, #73BCCF 68%, #5DA6D4 92%, #569ED6 100%);
@@ -133,10 +147,16 @@ header {
   z-index: -1; }
 
 .about-me-list {
-  font-size: 3.6em;
   list-style: none;
   margin-top: 3.5em; }
-  .about-me-list > li {
+  @media (max-width: 860px) {
+    .about-me-list {
+      font-size: 1.5em; } }
+  @media (max-width: 500px) {
+    .about-me-list {
+      font-size: 2.5em; } }
+  .about-me-list .about-list-section {
+    font-size: 3.5em;
     font-weight: 600;
     margin-top: 1.5em; }
   .about-me-list .sub-list {
@@ -148,12 +168,19 @@ header {
     border-bottom: 1px dotted #000;
     display: flex;
     flex-wrap: wrap;
-    font-size: 1.8rem;
+    font-size: 2.3em;
+    font-weight: 600;
     justify-content: space-between; }
+    @media (max-width: 500px) {
+      .about-me-list .title-wrapper {
+        justify-content: flex-start; } }
   .about-me-list .item-desc {
-    font-size: 1.4rem;
+    font-size: 2em;
     font-weight: 100;
     margin-top: .5em; }
+    @media (max-width: 500px) {
+      .about-me-list .item-desc {
+        font-size: 2.4em; } }
 
 .skills {
   clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
@@ -225,6 +252,9 @@ header {
   list-style: none;
   margin-top: 50px;
   text-align: center; }
+  @media (max-width: 500px) {
+    .social-links {
+      font-size: 5.5em; } }
   .social-links li {
     display: inline-block;
     margin: 20px 15px; }
@@ -245,6 +275,10 @@ header {
     padding: 5px;
     resize: none;
     width: 100%; }
+    @media (max-width: 500px) {
+      .contact-form textarea,
+      .contact-form input {
+        font-size: 6em; } }
   .contact-form input {
     height: 30px; }
     .contact-form input:nth-child(2) {
@@ -259,6 +293,9 @@ header {
     height: 40px;
     margin-top: 15px;
     width: 100px; }
+    @media (max-width: 500px) {
+      .contact-form button {
+        font-size: 6em; } }
     .contact-form button:hover {
       background: black;
       color: #fff; }
