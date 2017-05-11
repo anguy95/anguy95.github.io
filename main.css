@@ -7,6 +7,10 @@ body {
   font-family: sans-serif;
   font-size: calc(30% + .25vw); }
 
+@media (min-width: 1440px) {
+  html,
+  body {
+    font-size: 62.5%; } }
 section {
   padding: 1px 50px 100px; }
 
