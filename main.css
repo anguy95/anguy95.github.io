@@ -6,15 +6,17 @@ html,
 body {
   font-family: sans-serif;
   font-size: calc(30% + .25vw); }
+  @media (min-width: 1440px) {
+    html html,
+    html body,
+    body html,
+    body body {
+      font-size: 62.5%; } }
 
-@media (min-width: 1440px) {
-  html,
-  body {
-    font-size: 62.5%; } }
 section {
   padding: 1px 50px 100px; }
 
-.container {
+.section-container {
   margin: 0 auto;
   max-width: 980px;
   position: relative; }
@@ -46,9 +48,9 @@ header {
     width: 50px; }
 
 .site-nav {
-  font-size: 2.1em;
+  font-size: 2.5em;
   font-weight: 100;
-  letter-spacing: .15em;
+  letter-spacing: 2px;
   list-style: none;
   text-align: center; }
   .site-nav a {
@@ -60,6 +62,15 @@ header {
     display: inline-block;
     margin: 0 10px; }
 
+.site-nav-dropdown {
+  display: none; }
+
+@media (max-width: 700px) {
+  .site-nav {
+    display: none; }
+
+  .site-nav-dropdown {
+    display: block; } }
 .landing-page {
   background-attachment: fixed;
   background-image: -webkit-linear-gradient(191deg, #DCED8E 0%, #ABD7B6 31%, #73BCCF 68%, #5DA6D4 92%, #569ED6 100%);
@@ -81,6 +92,12 @@ header {
     width: 350px; }
   .landing-page-content .iphone > img {
     max-width: 375px; }
+  @media (max-width: 860px) {
+    .landing-page-content .who-i-am {
+      font-size: 20em;
+      width: auto; }
+    .landing-page-content .iphone {
+      display: none; } }
 
 .about-me {
   clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
@@ -166,7 +183,13 @@ header {
     color: #fff;
     font-size: 7em;
     font-weight: 100;
-    letter-spacing: .08em; }
+    letter-spacing: .08em;
+    margin-left: 2em;
+    text-indent: 0; }
+  @media (max-width: 650px) {
+    .skill-entry {
+      align-items: center;
+      flex-direction: column; } }
 
 .portfolio {
   align-items: center;
