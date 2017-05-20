@@ -95,6 +95,30 @@ header {
   }
 }
 
+#dropdownMenu {
+  color: white;
+  background: none;
+  border: 0;
+}
+
+.dropdown-menu {
+  border: none;
+}
+
+.dropdown-menu > li {
+  display: table;
+  font-size: 25px;
+  font-weight: 100;
+  height: 80px;
+  text-align: center;
+  width: 300px;
+
+  &>a {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
 .site-nav-dropdown {
   display: none;
 }
@@ -139,7 +163,7 @@ header {
 
   @media (max-width: 860px) {
     .who-i-am {
-      font-size: 20em;
+      font-size: 18em;
       width: auto;
     }
 
@@ -151,10 +175,6 @@ header {
 
 .about-me {
   @include angle-div;
-}
-
-.about-me-content {
-  //adsfds
 }
 
 .section-header,
@@ -239,12 +259,28 @@ header {
   }
 
   .item-desc {
-    font-size: 2em;
+    font-size: 2.2em;
     font-weight: 100;
-    margin-top: .5em;
+    margin: .5em 0 0 1em;
     @media (max-width: 500px) {
       font-size: 2.4em;
     }
+  }
+}
+
+.resume-download {
+  background: none;
+  border: thin solid black;
+  display: block;
+  font-size: 12px;
+  height: 50px;
+  letter-spacing: 1px;
+  margin: 100px auto;
+  text-transform: uppercase;
+  width: 150px;
+
+  &:hover {
+    color: #ccc;
   }
 }
 
@@ -257,10 +293,6 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.skills-content {
-  //
 }
 
 .skills-header {
@@ -406,7 +438,7 @@ header {
 }
 
 footer {
-  font-size: 1.6em;
+  font-size: 15px;
   height: 40px;
   line-height: 40px;
   text-align: center;

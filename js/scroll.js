@@ -15,7 +15,7 @@
 
 $(function() {
 
-  $('.container').scrollex({
+  $('.section-container').scrollex({
 
     // Scroll event: Perform various CSS tweaks based on the user's progress through this element.
     scroll: function(progress) {
@@ -47,26 +47,26 @@ $(function() {
 
       x = Math.max(0, Math.min(1, x));
 
-      // $title.css('opacity', x);
+      $title.css('opacity', x);
 
-      // // Paragraph.
+      // Paragraph.
 
-      // // Opacity.
-      // if (progress > 0.5)
-      //   x = 1 - progress;
-      // else
-      //   x = progress;
+      // Opacity.
+      if (progress > 0.5)
+        x = 1 - progress;
+      else
+        x = progress;
 
-      // x = Math.max(0, Math.min(1, x * 2));
+      x = Math.max(0, Math.min(1, x * 2));
 
-      // $p.css('opacity', x);
+      $p.css('opacity', x);
 
-      // // Next.
+      // Next.
 
-      // // Opacity.
-      // x = 1 - (Math.max(0, progress - 0.5) * 1.5);
+      // Opacity.
+      x = 1 - (Math.max(0, progress - 0.5) * 1.5);
 
-      // $next.css('opacity', x)
+      $next.css('opacity', x)
 
       // Scale.
       x = 1 - (Math.max(0, progress - 0.5));
